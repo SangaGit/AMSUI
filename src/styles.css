@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+header, main, footer {
+    padding-left: 300px !important;
+}
+#toast-container > div{
+    opacity: 1;
+}
+.active-link{
+    background-color: antiquewhite;
+}

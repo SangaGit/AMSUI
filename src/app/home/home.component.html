@@ -1,0 +1,32 @@
+<!-- Navbar goes here -->
+<header>
+        <nav class="top-nav navbar-fixed blue-grey">
+                <div class="nav-wrapper">
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li><a (click)="logout()"><i class="material-icons left">exit_to_app</i>Logout</a></li>
+                    </ul>
+                  </div>
+          </nav>
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="">
+          </div>
+          <a routerLink="/home"><img class="circle" src="assets/img/collins.jpeg"></a>
+          <a href="#name"><span class="white-text name">John Doe</span></a>
+          <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div></li>
+        <li *ngIf="userService.roleMatch(['SuperAdmin'])"><a routerLink="/home/usermanagement" routerLinkActive="active-link"><i class="material-icons">group_add</i>User Management</a></li>
+        <li><a routerLink="/home/adminpanel" routerLinkActive="active-link"><i class="material-icons">settings</i>Settings</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      </ul>
+</header>
+    <!-- Page Layout here -->
+<main>
+        <div class="col-md-12"> <!-- Note that "m8 l9" was added -->
+          <!-- <h1>Home</h1> -->
+          <router-outlet></router-outlet>
+        </div>
+</main>
